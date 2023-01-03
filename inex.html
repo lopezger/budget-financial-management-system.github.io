@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body> 
+	<div class="form-holder">
+		<img src="icon.png">
+		<form action="/Users/admin/Documents/2E/sia/SYSTEM/Home.html" class="form">
+			<div class="input-group">
+			<input type="text" name= "loginUser" id="username" placeholder="Username" required>
+		</div>
+		<div class="input-group">
+			<input type="password" name= "loginPassword" id="password" placeholder="Password" required>
+			<input type="submit" value="Login" class="submit-btn" onclick="auth()"/>
+		</div>
+		</form>
+	</div>
+	<script>
+		function auth()
+		{
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+			if (username == "admin" && password == "admin123"){
+				window.location.href='Home.html';
+				alert("Login Successfully");
+			}
+			else {
+				alert("Invalid Information");
+				return;
+			}
+		}
+	</script>
+</body>
+</html>
